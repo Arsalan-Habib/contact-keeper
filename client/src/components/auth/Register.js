@@ -1,6 +1,12 @@
 import React, { useState } from "react";
+import AlertContext from "../../context/alert/alertContext";
+import { useContext } from "react";
 
 const Register = () => {
+    const alertContext = useContext(AlertContext);
+
+    const { setAlert } = alertContext;
+
     const [user, setUser] = useState({
         name: "",
         email: "",
@@ -15,7 +21,13 @@ const Register = () => {
 
     const onSubmit = (e) => {
         e.preventDefault();
-        console.log("Register Submit");
+        if (name === "" || email === "" || password === "") {
+            setAlert("Please enter all fields", "danger", 2500);
+        } else if (password !== password2) {
+            setAlert("Passwords do not match", "danger", 2500);
+        } else {
+            console.log("Register Submit");
+        }
     };
 
     return (
@@ -49,6 +61,7 @@ const Register = () => {
                         name='password'
                         value={password}
                         onChange={onChange}
+                        minLength='6'
                     />
                 </div>
                 <div className='form-group'>
@@ -58,6 +71,7 @@ const Register = () => {
                         name='password2'
                         value={password2}
                         onChange={onChange}
+                        minLength='6'
                     />
                 </div>
                 <input
