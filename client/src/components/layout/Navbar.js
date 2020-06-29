@@ -25,7 +25,7 @@ const Navbar = ({ title, icon }) => {
                         className='fas fa-sign-out-alt'
                         style={{ color: "yellow" }}
                     />{" "}
-                    <span className='hide-sm' style={{ color: "yellow" }}>
+                    <span style={{ color: "yellow" }}>
                         <strong>Logout</strong>
                     </span>
                 </a>
