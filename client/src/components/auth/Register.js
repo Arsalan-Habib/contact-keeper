@@ -50,7 +50,7 @@ const Register = (props) => {
     };
 
     return (
-        <div className='form-container'>
+        <div className='form-container form-card'>
             <h1>
                 Account <span className='text-primary'>Register</span>
             </h1>
@@ -96,8 +96,11 @@ const Register = (props) => {
                 <input
                     type='submit'
                     value='Register'
-                    className='btn btn-primary btn-block'
+                    className='btn btn-primary btn-block btn-rounded'
                 />
+                <small>
+                    Already have an account? <a href='/login'>Login</a>{" "}
+                </small>
             </form>
         </div>
     );
