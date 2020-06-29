@@ -23,7 +23,7 @@ const Navbar = ({ title, icon }) => {
                 <a onClick={onLogout} href='#!'>
                     <i
                         className='fas fa-sign-out-alt'
-                        style={{ color: "yellow" }}
+                        style={{ marginLeft: "25px", color: "yellow" }}
                     />{" "}
                     <span style={{ color: "yellow" }}>
                         <strong>Logout</strong>

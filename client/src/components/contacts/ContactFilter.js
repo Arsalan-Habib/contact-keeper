@@ -22,12 +22,17 @@ const ContactFilter = () => {
 
     return (
         <form>
-            <input
-                ref={text}
-                type='text'
-                placeholder='Filter Contacts...'
-                onChange={onChange}
-            />
+            <div className='filter-contacts'>
+                {/* <i className='fas fa-search' style={{ fontSize: "20px" }} /> */}
+                <input
+                    className='filter-input'
+                    style={{ marginTop: "30px" }}
+                    ref={text}
+                    type='text'
+                    placeholder='Filter Contacts...'
+                    onChange={onChange}
+                />
+            </div>
         </form>
     );
 };
