@@ -73,7 +73,7 @@ const Login = (props) => {
                     <input
                         type='submit'
                         value='Login'
-                        className='btn btn-primary btn-block btn-rounded'
+                        className='btn btn-primary btn-block btn-rounded login-btn'
                     />
                     <small>
                         Don't have an account? <a href='/register'>Sign up</a>

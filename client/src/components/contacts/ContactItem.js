@@ -14,7 +14,7 @@ const ContactItem = ({ contact }) => {
     };
 
     return (
-        <div className='card bg-light'>
+        <div className='contact-item card bg-light'>
             <h3 className='text-primary text-left'>
                 {name}{" "}
                 <span
@@ -32,7 +32,7 @@ const ContactItem = ({ contact }) => {
             <ul className='list'>
                 {email && (
                     <li>
-                        <i className='fas fa-envelope-open'></i> {email}
+                        <i className='fas fa-envelope'></i> {email}
                     </li>
                 )}
                 {phone && (
@@ -41,15 +41,17 @@ const ContactItem = ({ contact }) => {
                     </li>
                 )}
             </ul>
-            <p>
+            <p className='contact-item-btns'>
                 <button
                     className='btn btn-dark btn-sm'
                     onClick={() => setCurrent(contact)}
                 >
                     Edit
+                    <i className='fas fa-user-edit'></i>
                 </button>
                 <button className='btn btn-danger btn-sm' onClick={onDelete}>
                     Delete
+                    <i className='fas fa-user-times'></i>
                 </button>
             </p>
         </div>
