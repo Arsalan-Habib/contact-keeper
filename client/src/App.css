@@ -436,40 +436,49 @@ textarea {
 small a {
     font-weight: 600;
 }
-/* .filter-input:focus {
-  border: none !important;
-  outline: none !important;
+
+.search-icon i {
+    padding: 9px 9px 7px 10px;
+    font-size: 21px;
+    color: #888;
 }
+
+.search-icon {
+    border-right: 1px dotted #ccc;
+}
+
 .filter-input {
-  outline: none;
-  border: none !important;
-  display: inline-block;
-  height: 100%;
-  margin-top: 30px;
+    padding: 5px 5px 5px 12px !important ;
+    margin: 0px;
+    border: none !important;
+    box-shadow: none !important;
+}
+.filter-input textarea {
+    text-decoration: none !important;
 }
 
 .filter-contacts {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  border: 1px solid #ccc;
-  height: 40px;
-  margin: 20px 0px;
-  padding: 10px 5px;
-  border-radius: 8px;
+    margin: 30px 0px;
+    padding: 2px 0px;
+    display: flex;
+    flex-direction: row;
+    border: 1px solid #ccc;
+    border-radius: 5px;
 }
 
-.filter-contacts i {
-  color: #777777;
-  padding: 4px 10px 4px 4px;
-  border-right: 1px solid #ccc;
-} */
+.filter-contacts:focus-within {
+    border: 2px solid #888 !important;
+    box-shadow: none !important;
+}
 
 /* Mobile Styles */
 @media (max-width: 700px) {
     .hide-sm {
         display: none;
+    }
+
+    .form-card {
+        padding: 25px 15px;
     }
 
     input[type="text"],
@@ -484,6 +493,7 @@ small a {
         font-size: 0.9rem;
         border: 1px solid #ccc;
     }
+
     .grid-2,
     .grid-3,
     .grid-4 {
